@@ -1,0 +1,378 @@
+/*
+ * These are all of the typopgraphy styles. To simplify everyone's life, 
+ * I have decided to split ALL typography into this file alone. 
+ * I don't see any sense in trying to find a few items in a 3000 line stylesheet for magento... 
+ * If you want to edit a link or two here, then go for it! 
+ * I certianly do hope this makes life easier for all you web developers and web designers out there. 
+ * Please send us your thoughts.
+ * 
+ * FEATURES
+ * @font-face samples
+ * Categorized area for magento to simplify editing
+ * Areas include:
+ * 		Entity and General Links
+ * 		Entity Headings
+ * 		Header
+ * 		Sidebar
+ * 		Form
+ * 		Global Messages
+ * 		Contact Form
+ * 		Catalog List
+ * 		Catalog Product
+ * 
+ * @author Dennis Thompson AtomicPages LLC <http: //www.atomicpages.net/>
+ * @license GPL 3.0
+ * @see http: //www.gnu.org/licenses/gpl.txt for additional details
+ */
+/* @FONT-FACE RULES
+ * ----------------------------------------------------- */
+/* the following is a sample */
+/* @font-face {
+	font-family: 'FontName';
+	src: url('../fonts/font_name.eot');
+	src: url('../fonts/font_name.eot?#iefix') format('embedded-opentype'),  
+	url('../fonts/font_name.woff') format('woff'),  
+	url('../fonts/font_name.ttf') format('truetype'),  
+	url('../fonts/font_name.svg#webfont') format('svg');
+} */
+@font-face {
+	font-family: 'magra';
+	src: url('../fonts/magra-regular-webfont.eot');
+	src: url('../fonts/magra-regular-webfont.eot?#iefix') format('embedded-opentype'),  
+	url('../fonts/magra-regular-webfont.woff') format('woff'),  
+	url('../fonts/magra-regular-webfont.ttf') format('truetype'),  
+	url('../fonts/magra-regular-webfont.svg#webfont') format('svg');
+}
+@font-face {
+	font-family: 'magrabold';
+	src: url('../fonts/magra-bold-webfont.eot');
+	src: url('../fonts/magra-bold-webfont.eot?#iefix') format('embedded-opentype'),  
+	url('../fonts/magra-bold-webfont.woff') format('woff'),  
+	url('../fonts/magra-bold-webfont.ttf') format('truetype'),  
+	url('../fonts/magra-bold-webfont.svg#webfont') format('svg');
+}
+/* @see http://www.fontsquirrel.com/fontface/generator for details on how to create your own web fonts */
+/* @see http://www.google.com/webfonts for awesome free fonts */
+/* for useage do this: font-family: 'magra', sans-serif; */
+
+/* ENTITY BODY AND GENERAL LINKS
+ * ----------------------------------------------------- */
+body {
+	font: normal 12px 'magra', Tahoma, Verdana, "Trebuchet MS", Arial, sans-serif;
+	color: #2f2f2f !important;
+	text-align: center;
+}
+b, strong { font-family: 'magrabold', Tahoma, Verdana, "Trebuchet MS", Arial, sans-serif; }
+a {
+	color: #000;
+	text-decoration: underline;
+}
+a:hover { text-decoration: none; }
+
+/* ENTITY HEADINGS
+ * ----------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 5px;
+	line-height: 1.35;
+	color: #000;
+}
+h1 {
+	font-size: 20px;
+	font-weight: normal;
+}
+h2 {
+	font-size: 18px;
+	font-weight: normal;
+}
+h3 {
+	font-size: 16px;
+	font-weight: bold;
+}
+h4 {
+	font-size: 14px;
+	font-weight: bold;
+}
+h5 {
+	font-size: 12px;
+	font-weight: bold;
+}
+h6 {
+	font-size: 11px;
+	font-weight: bold;
+}
+strong { font-weight: bold; }
+address {
+	font-style: normal;
+	line-height: 1.35;
+}
+cite { font-style: normal; }
+small, big { font-size: 1em; }
+.page-print, .page-empty, .page-popup, .main { text-align: left; }
+
+/* HEADER TYPOGRAPHY
+ * ----------------------------------------------------- */
+.header .links a { color: #000; }
+.header .welcome-msg { color: #000; }
+.header .welcome-msg a { color: #000; }
+
+/* SIDEBAR TYPOGRAPHY
+ * ----------------------------------------------------- */
+.block .block-title strong {
+	font: bold 12px/16px Arial, Helvetica, sans-serif;
+	color: #e26703;
+	text-transform: uppercase;
+}
+.block .block-title a { text-decoration: none !important; }
+
+/* FORM TYPOGRAPHY
+ * ----------------------------------------------------- */
+input, select, textarea, button {
+	font: 12px/15px Arial, Helvetica, sans-serif;
+	color: #2f2f2f;
+}
+.fieldset .legend { color: #000; }
+.form-list label {
+	color: #666;
+	font-weight: bold;
+}
+.form-list label.required em {
+	font-style: normal;
+	color: #eb340a;
+}
+.buttons-set { text-align: right; }
+.validation-advice {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 13px;
+	color: #eb340a;
+}
+p.required {
+	font-size: 11px;
+	text-align: right;
+	color: #EB340A;
+}
+
+/* GLOBAL MESSAGES TYPOGRAPHY
+ * ----------------------------------------------------- */
+.success {
+	color: #3d6611;
+	font-weight: bold;
+}
+.error {
+	color: #df280a;
+	font-weight: bold;
+}
+.notice { color: #e26703; }
+.error-msg { color: #df280a; }
+.success-msg { color: #3d6611; }
+.note-msg, .notice-msg { color: #3d6611; }
+
+/* PAGE TYPOGRAPHY
+ * ----------------------------------------------------- */
+.page-title h1, .page-title h2 { color: #0a263c; }
+.subtitle, .sub-title { color: #e25203; }
+
+/* CONTACT FORM TYPOGRAPHY
+ * Yeah, we got sick of not seeing this either - enjoy
+ * ----------------------------------------------------- */
+#contactForm { }
+#contactForm label { }
+#contactForm label.required { }
+#contactForm input { }
+#contactForm input.required-entry { }
+#contactForm p.required { }
+
+/* CATALOG LIST TYPOGRAPHY
+ * This simply means the GRID and LIST view typography, 
+ * the actual product page will be in its own category
+ * ----------------------------------------------------- */
+.block .regular-price, .block .regular-price .price { color: #2f2f2f; }
+.price-box .price {
+	font-weight: bold;
+	color: red;
+}
+/* Regular Price */
+.regular-price { color: red; }
+.regular-price .price {
+	font-weight: bold;
+	font-size: 13px;
+	color: red;
+}
+/* Special Price */
+.special-price .price-label {
+	font-size: 13px;
+	font-weight: bold;
+	white-space: nowrap;
+	color: blue;
+}
+.special-price .price {
+	font-size: 13px;
+	font-weight: bold;
+	color: blue;
+}
+.minimal-price-link .price {
+	font-weight: normal;
+	color: green;
+}
+/* Excluding Tax */
+.price-excluding-tax {
+	display: block;
+	color: #999;
+}
+.price-excluding-tax .label {
+	white-space: nowrap;
+	color: #999;
+}
+.price-excluding-tax .price {
+	font-size: 13px;
+	font-weight: normal;
+	color: green;
+}
+/* Including Tax */
+.price-including-tax {
+	display: block;
+	color: #999;
+}
+.price-including-tax .label {
+	white-space: nowrap;
+	color: #999;
+}
+.price-including-tax .price {
+	font-size: 13px;
+	font-weight: bold;
+	color: red;
+}
+/* Old Price */
+.old-price .price-label {
+	white-space: nowrap;
+	color: #999;
+}
+.old-price .price {
+	font-weight: bold;
+	color: #c76200;
+	text-decoration: line-through;
+}
+/* Minimal price ('as low as') */
+.minimal-price .price-label {
+	font-weight: bold;
+	white-space: nowrap;
+}
+.minimal-price-link .label { color: #1e7ec8; }
+/* Configured price */
+.configured-price .price-label {
+	font-weight: bold;
+	white-space: nowrap;
+}
+.configured-price .price { font-weight: bold; }
+/* FPT */
+.weee {
+	font-size: 11px;
+	color: #444;
+}
+.weee .price {
+	font-size: 11px;
+	font-weight: normal;
+}
+/* Price notice next to the options */
+.price-notice { color: #999; }
+.price-notice .price {
+	font-weight: bold;
+	color: #2f2f2f;
+}
+/* Price as configured */
+.price-as-configured .price-label {
+	font-weight: bold;
+	white-space: nowrap;
+}
+.price-box-bundle .price { color: #555; }
+/* Tier Prices */
+.tier-prices .benefit {
+	font-style: italic;
+	font-weight: bold;
+	color: #2f2f2f;
+}
+.tier-prices .price {
+	font-weight: bold;
+	color: #2f2f2f;
+}
+.tier-prices-grouped li .price { font-weight: bold; }
+
+/* CATALOG PRODUCT TYPOGRAPHY
+ * These are all of the styles for the product view page
+ * Yes, it is rather extensive...
+ * ----------------------------------------------------- */
+.add-to-links { font-size: 11px; }
+.add-to-cart label {
+	font-weight: bold;
+	color: #666;
+}
+.add-to-box .or {
+	font-weight: bold;
+	color: #666;
+}
+.add-to-box .add-to-links {
+	font-size: 12px !important;
+	line-height: 1.25 !important;
+	text-align: left !important;
+}
+.product-essential h2 { font: bold 13px/1.35 Arial, Helvetica, sans-serif; }
+.product-collateral h2 {
+	font-weight: bold;
+	font-size: 15px;
+	color: #e26703;
+}
+.product-view .product-img-box .more-views h2 {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.product-image-popup .nav {
+	font-weight: bold;
+	text-align: center;
+}
+.product-image-popup .image-label {
+	font-size: 13px;
+	font-weight: bold;
+	color: #2f2f2f;
+}
+.product-view .product-shop .product-name h1 { font: bold 15px/1.35 Arial, Helvetica, sans-serif; }
+.product-view .product-shop .add-to-links {
+	font-size: 12px;
+	text-align: right;
+}
+.product-view .product-shop .add-to-links a {
+	color: #1E7EC8 !important;
+	font-weight: normal !important;
+}
+/* Product Options */
+.product-options dt { font-weight: normal; }
+.product-options dt label {
+	font-weight: bold;
+	color: #2f2f2f;
+}
+.product-options dt label.required em { color: #eb340a; }
+.product-options dt .qty-disabled { color: #2f2f2f; }
+.product-options ul.options-list label { font-weight: normal; }
+.product-options p.note { font-size: 11px; }
+.product-options-bottom .tier-prices li { color: #e26703; }
+.product-options-bottom .tier-prices .price, .product-options-bottom .tier-prices .benefit { color: #e26703; }
+.product-view .box-up-sell .products-grid .product-image { text-align: center; }
+/* Block: Tags */
+.product-view .box-tags h3 { font-size: 13px; }
+.product-view .box-tags .form-add label {
+	font-size: 13px;
+	font-weight: bold;
+	color: #0a263c;
+}
+/* Block: Reviews */
+.product-view .box-reviews .form-add h3 {
+	font-size: 13px;
+	font-weight: normal;
+}
+.product-view .box-reviews .form-add h3 span { font-weight: bold; }
+.product-view .box-reviews .form-add h4 { font-size: 12px; }
+.product-view .box-reviews .form-add .data-table td { text-align: center; }
+/* Send a Friend */
+.send-friend .buttons-set .limit {
+	font-size: 11px;
+	line-height: 21px;
+}

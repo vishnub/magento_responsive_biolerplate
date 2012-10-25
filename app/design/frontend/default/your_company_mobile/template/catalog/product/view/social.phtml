@@ -1,0 +1,64 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * This file contains the social media information that is available on
+ * the product view page. Periodic releases of this theme will be released
+ * as updates and this file MAY OR MAY NOT BE included in those files.
+ * A list of affected files will come with any update in the future.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author		Dennis Thompson AtomicPages LLC <http://www.atomicpages.net/>
+ */
+?>
+
+<?php
+/*
+ * MUCH ADO ABOUT YOUR SOCIAL LINKS:
+ * These links will AUTOMATICALLY like, tweet, and +1 the CURRENT URL that 
+ * the person is on...
+ * CONFIGURATION OPTIONS:
+ * Unfortunately, these are all manual for the time being so here are your
+ * options:
+ * 
+ * FACEBOOK: 
+ * data-send - this boolean (true OR false) value asks if you want the send button or not
+ * data-width - this is an integer value (any WHOLE number) that measures out the number of pixels you wish the button to be
+ * data-show-faces - this boolean value asks if you want to show the faces on the like button
+ * layout - you choose the different types of layouts facebook has to offer {standard, button_count, box_count}
+ * colorscheme - this attribute has two possible values {light, dark}
+ * action - this is the verb facebook uses on the button {like, recommend}
+ * 
+ * TWITTER:
+ * 
+ * @link https://dev.twitter.com/docs/tweet-button for addditional details
+ * 
+ * GOOGLE +1:
+ * data-size - takes a STRING as an argument {small, standard, medium, tall}
+ * data-href - the URL to +1 (captures current page by default)
+ * data-annotation - takes a STRING {inline, bubble, none}
+ * callback - takes a javascript callback function
+ * @link http://www.google.com/webmasters/+1/button/
+ */
+?>
+
+<div class="social-sharing">
+	<ul class="social-links">
+		<li><div class="fb-like" data-href="<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>" data-send="false" data-width="60" data-show-faces"false" layout="button_count" colorscheme="light" action="like"></div></li>
+		<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+		<li><div class="g-plusone" data-size="medium" data-href="<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>"></div></li>
+	</ul>
+</div>

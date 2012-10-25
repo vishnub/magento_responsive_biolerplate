@@ -1,0 +1,39 @@
+/**
+ * 	This file is for options that have been compiled into a nice
+ * stylesheet. These are basically "helper" selectors that you 
+ * can use to accomplish various things that you need done.
+ * Refer to the details commented above the selectors for what
+ * they do.
+ * 
+ * HOW TO ENABLE FEATURES
+ * Just uncomment these BLOCKS of code to enable the desired options.
+ * 
+ * NOTE:
+ * This file is the right before the custom stylesheet so any styles can
+ * be overriden in the custom.css file or via the !important rule.
+ *  
+ * @author Dennis Thompson AtomicPages LLC <http: //www.atomicpages.net/>
+ * @license GPL 3.0
+ * @see http: //www.gnu.org/licenses/gpl.txt for additional details
+ */
+
+/* 
+ * Want a header, navigation, and container that spans the width of
+ * the window without having a fluid layout? Here's your answer!
+ * You'll find that it's really pretty easy...
+ */
+
+/* BEGIN FULL WIDTH CONTAINER LAYOUT */
+
+/*
+.wrapper, 
+.header-container, 
+.main-container, 
+.footer-container { width: 100%; }
+.header, .main, .footer { 
+	margin: 0 auto; 
+	width: 930px; 
+}
+*/
+
+/* END FULL WIDTH CONTAINER LAYOUT */

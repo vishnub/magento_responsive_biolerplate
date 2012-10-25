@@ -1,0 +1,613 @@
+/*
+* Skeleton V1.2
+* Copyright 2012, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/*
+ * Magento Starter Theme
+ * Dennis Thompson <http://www.atomicpages.net>
+ * Copyright (on written content only) 2012, AtomicPages LLC
+ * Released under GPL 3.0
+ * http://www.gnu.org/licenses/gpl-3.0.txt
+ */
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#SAMPLE CONTENT STYLES
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* SAMPLE CONTENT STYLES
+================================================== */
+/* remove margins on the home page if we create a phony sidebar */
+.col-main .col-left.side-col.four.columns { margin: 0; }
+body.catalog-category-view .col-left.sidebar.four.columns,
+body.catalog-category-view .col-right.sidebar.four.columns { margin: 0; }
+/* #Media Queries
+================================================== */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+    button.button { -webkit-border-fit: lines; }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* CONTAINERS
+     * ------------------------------------------------------------------------ */
+    .main-container {
+        padding-top: 0;
+        background: none;
+    }
+    .page-title h1, .page-title h2 { text-align: center; }
+    .col-left.sidebar { margin-top: 10px; }
+    
+    /* HEADER STYLES
+     * ------------------------------------------------------------------------ */
+    .header .welcome-msg {
+        clear: both;
+        text-align: center;
+    }
+    .header .quick-access {
+            float: none;
+            padding: 0;
+    }
+    .header .links li { }
+    form#search_mini_form {
+        display: block;
+        clear: both;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+    }
+    .header .form-search {
+            position: static;
+            top: auto;
+            right: auto;
+            padding: 0;
+    }
+    .header .form-search input.input-text {
+        float: left;
+        margin: 3px 0 0 0;
+    }
+    .header .form-search input.button { float: right; }
+    .form-language { padding: 5px 30px 0; }
+    select#select-language { margin-bottom: 0; }
+    
+    /* HOME PAGE + PHONY SIDEBAR STYLES
+     * ------------------------------------------------------------------------ */
+    p.home-callout, p.home-callout + div { display: none; }
+    .home-callout img { display: none; }
+    
+    /* NAVIGATION
+     * ------------------------------------------------------------------------ */
+    #nav li,
+    #nav li a { float: none; }
+    #nav li { border-bottom: 1px solid white; }
+    .nav-container { margin-bottom: 15px !important; }
+    #nav > li ul,
+    #nav > li ul * { display: none; }
+    
+    /* SIDEBARS
+     * ------------------------------------------------------------------------ */
+    /* Catalog > Shopping Options */
+    .block-tags .block-title strong { background: none; }
+    .block-layered-nav .block-title { height: auto; }
+    .block-layered-nav .block-content {
+        border: none;
+        background: none;
+    }
+    .block-layered-nav #shopping_options,
+    .block-account #account_nav {
+        border-left: 1px solid #A0B3C3;
+        border-bottom: 1px solid #A0B3C3;
+        border-right: 1px solid #A0B3C3;
+    }
+    .products-grid li.item { }
+    .col-right .block-compare,  .col-right .block-viewed,
+    .col-right .block-compared,  .col-right .block-banner { display: none; }
+    
+    /* LOGIN PAGE
+     * ------------------------------------------------------------------------ */
+    .account-login .content { min-height: inherit; }
+    .account-login .new-users h2,
+    .account-login .registered-users h2 {
+        color: black;
+        text-align: center;
+        padding-left: 0;
+    }
+    .block.block-account {border: none; }
+    
+    /* ACCOUNT PAGE
+     * ------------------------------------------------------------------------ */
+    .block-cart .actions { text-align: center; }
+    .block-cart .actions button.button { float: none; }
+    
+    .cart .crosssell {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cart .crosssell-inner { padding: 10px; }
+    
+    /* LIST PAGE
+     * ------------------------------------------------------------------------ */
+    .products-list .product-shop { margin-left: 0; }
+    .products-list .minimal-price-link { display: none; }
+    .limiter { display: none; }
+    .products-list .price-box { padding-top: 5px; }
+    .regular-price .price {
+        font-size: 24px;
+        color: black;
+        text-shadow: 1px 1px 1px #efefef;
+    }
+    .pager { font-size: 12px; }
+    .pages strong {
+        float: left;
+        padding-top: 3px;
+        padding-right: 90px;
+    }
+    .pager .pages ol {
+        margin: 0;
+        float: left;
+    }
+    .products-list .product-image {
+		width: 250px;
+		height: 250px;
+		float: none;
+	}
+    
+    /* VIEW PAGE
+     * ------------------------------------------------------------------------ */
+    .product-view .product-shop { width: auto; }
+    .products-grid .product-image { display: inline }
+    .product-view .product-shop .price-box {
+        margin: 0;
+        float: left;
+    }
+    .product-view .product-shop .regular-price .price { font-size: 36px; }
+    .add-to-cart {
+        float: right !important;
+        margin-top: 3px;
+    }
+    .add-to-cart-inner { } /* for extra control */
+    .add-to-cart label { display: none; }
+    .add-to-cart input[type="text"] {
+        padding: 6px 6px 7px;
+        margin-top: 3px;
+    }
+    .product-view .product-shop .add-to-links {
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+    .social-sharing ul {
+        margin: 0;
+        padding: 0;
+    }
+    .social-sharing ul li {
+        float: left;
+        padding-right: 5px;
+    }
+    .product-options,
+    .product-options-bottom{ border: none; }
+    .products-grid { border-bottom: none; }
+    .product-collateral { padding: 0 25px 25px; }
+    .flexslider_upsell ul {
+        margin: 0;
+        padding: 0;
+    }
+    .flexslider_upsell ul li {
+        margin: 0;
+        line-height: inherit;
+    }
+    .flexslider_upsell ul a > img { padding-left: 58px; }
+    .product-view + .sidebar .block-cart { margin-top: 10px; }
+    
+    /* CART SUMMARY PAGE
+     * ------------------------------------------------------------------------ */
+    .cart .page-title h1 {
+        float: none;
+        text-align: center;
+    }
+    .cart-items { }
+    .cart-items h2.product-name + a { display: none; }
+    .cart-items input[type="checkbox"] { display: none; }
+    button.btn-checkout {
+        width: 100%;
+        text-align: center;
+    }
+    .cart-image {
+        float: left;
+        padding-right: 35px;
+    }
+    .cart-remove-item { float: left; }
+    .cart-remove-item a.btn-remove2 {
+        width: 32px;
+        height: 32px;
+        background: transparent url('../images/icons/cart-delete.png') no-repeat 0 0;
+    }
+    .cart-product-info {
+        clear: both;
+        margin-top: 5px;
+    }
+    .cart-product-info h2 { margin-bottom: 15px; }
+    .cart-product-info h2 a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .cart-qty { margin-bottom: 10px; }
+    .cart-qty input {
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .cart-total { margin-bottom: 10px; }
+    .cart-total > span {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .cart-product-info h2 a:hover,
+    .cart-product-info h2 a:focus { color: #666; }
+    .cart-product-info h2 a:active { text-decoration: underline; }
+    .cart-price-no-tax > span { display: none; }
+    /*
+     * Doesn't hardly impact performance this is just easier
+     * Comment out the line below to bring back edit link for
+     * mobile
+     */
+    .edit-cart-item { display: none; }
+    .cart .totals {
+        float: none;
+        width: 100%;
+        background: white;
+    }
+    .cart .totals tr:first-child td,
+    .cart .totals tbody tr td { /* use tbody as a fall back */
+        font-weight: 700;
+        color: #666;
+    }
+    .cart .totals tfoot tr td strong { font-size: 20px; }
+    .cart .cart-collaterals .col2-set {
+        float: none;
+        width: 100%;
+    }
+    .cart .cart-collaterals .col2-set .col-2 { width: 100%; }
+    .flexslider_crosssell .flex-direction-nav a { top: 60%; }
+    
+    /* CHECKOUT PAGE
+     * ------------------------------------------------------------------------ */
+    /*
+     * A special note on these styles. Bear in mind some of this is
+     * because editing the your_company_mobile template files
+     * in checkout/onepage/ simple do not work. We are looking
+     * into a fix. If you know how to resolve this issue see the
+     * README file in that directory for more details. Thank you
+     * - DT
+     */
+    #checkoutSteps { margin: 0; }
+    #checkoutSteps ul.form-list { margin: 0; }
+    #checkoutSteps .step { padding: 15px 10px; }
+    #checkout-step-review.step { padding: 0; }
+    #checkoutSteps .form-list input.input-text { width: 70%; }
+    #checkoutSteps .form-list li ul {
+        margin: 0 0 0 10px;
+        padding-top: 10px;
+    }
+    #checkoutSteps .buttons-set { padding-top: 0; }
+    #checkoutSteps fieldset { margin-bottom: 0; }
+    #checkout-step-login.step { padding: 10px; }
+    
+    /* Begin CSS Hacks for onepage templates */
+    #checkoutSteps li.wide .input-box { width: 254px; }
+    #checkoutSteps .form-list li.control > input { float: left; }
+    #checkoutSteps #checkout-step-login .ul { display: none; }
+    /* #checkoutSteps #checkout-step-login .form-list { margin-left: 5px; } */
+    #checkoutSteps #checkout-step-login .col-1 p.required:first-child { display: none; }
+    /* End CSS Hacks for onepage templates */
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    /* CONTAINERS
+     * ------------------------------------------------------------------------ */
+    .main-container {
+        padding-top: 0;
+        background: none;
+    }
+    .page-title h1, .page-title h2 { text-align: center; }
+    .col-left.sidebar { margin-top: 10px; }
+    
+    /* HEADER STYLES
+     * ------------------------------------------------------------------------ */
+    .header .welcome-msg {
+        clear: both;
+        text-align: center;
+    }
+    .header .quick-access {
+            float: none;
+            padding: 0;
+    }
+    .header .links li { }
+    form#search_mini_form {
+        display: block;
+        clear: both;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+    }
+    .header .form-search {
+            position: static;
+            top: auto;
+            right: auto;
+            padding: 0;
+    }
+    .header .form-search input.input-text {
+        float: left;
+        margin: 3px 0 0 0;
+    }
+    .header .form-search input.button { float: right; }
+    .form-language { padding: 5px 30px 0; }
+    select#select-language { margin-bottom: 0; }
+    
+    /* HOME PAGE + PHONY SIDEBAR STYLES
+     * ------------------------------------------------------------------------ */
+    p.home-callout, p.home-callout + div { display: none; }
+    .home-callout img { display: none; }
+    
+    /* NAVIGATION
+     * ------------------------------------------------------------------------ */
+    #nav li,
+    #nav li a { float: none; }
+    #nav li { border-bottom: 1px solid white; }
+    .nav-container { margin-bottom: 15px !important; }
+    #nav > li ul,
+    #nav > li ul * { display: none; }
+    
+    /* SIDEBARS
+     * ------------------------------------------------------------------------ */
+    /* Catalog > Shopping Options */
+    .block-tags .block-title strong { background: none; }
+    .block-layered-nav .block-title { height: auto; }
+    .block-layered-nav .block-content {
+        border: none;
+        background: none;
+    }
+    .block-layered-nav #shopping_options,
+    .block-account #account_nav {
+        border-left: 1px solid #A0B3C3;
+        border-bottom: 1px solid #A0B3C3;
+        border-right: 1px solid #A0B3C3;
+    }
+    .products-grid li.item { }
+    .col-right .block-compare,  .col-right .block-viewed,
+    .col-right .block-compared,  .col-right .block-banner { display: none; }
+    
+    /* LOGIN PAGE
+     * ------------------------------------------------------------------------ */
+    .account-login .content { min-height: inherit; }
+    .account-login .new-users h2,
+    .account-login .registered-users h2 {
+        color: black;
+        text-align: center;
+        padding-left: 0;
+    }
+    .block.block-account {border: none; }
+    
+    /* ACCOUNT PAGE
+     * ------------------------------------------------------------------------ */
+    .block-cart .actions { text-align: center; }
+    .block-cart .actions button.button { float: none; }
+    
+    .cart .crosssell {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cart .crosssell-inner { padding: 10px; }
+    
+    /* LIST PAGE
+     * ------------------------------------------------------------------------ */
+    .products-list .product-shop { margin-left: 0; }
+    .products-list .minimal-price-link { display: none; }
+    .limiter { display: none; }
+    .products-list .price-box { padding-top: 5px; }
+    .regular-price .price {
+        font-size: 24px;
+        color: black;
+        text-shadow: 1px 1px 1px #efefef;
+    }
+    .pager { font-size: 12px; }
+    .pages strong {
+        float: left;
+        padding-top: 3px;
+        padding-right: 90px;
+    }
+    .pager .pages ol {
+        margin: 0;
+        float: left;
+    }
+    .products-list .product-image {
+		width: 250px;
+		height: 250px;
+		float: none;
+	}
+    
+    /* VIEW PAGE
+     * ------------------------------------------------------------------------ */
+    .product-view .product-shop { width: auto; }
+    .products-grid .product-image { display: inline }
+    .product-view .product-shop .price-box {
+        margin: 0;
+        float: left;
+    }
+    .product-view .product-shop .regular-price .price { font-size: 36px; }
+    .add-to-cart {
+        float: right !important;
+        margin-top: 3px;
+    }
+    .add-to-cart-inner { } /* for extra control */
+    .add-to-cart label { display: none; }
+    .add-to-cart input[type="text"] {
+        padding: 6px 6px 7px;
+        margin-top: 3px;
+    }
+    .product-view .product-shop .add-to-links {
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+    .social-sharing ul {
+        margin: 0;
+        padding: 0;
+    }
+    .social-sharing ul li {
+        float: left;
+        padding-right: 5px;
+    }
+    .product-options,
+    .product-options-bottom{ border: none; }
+    .products-grid { border-bottom: none; }
+    .product-collateral { padding: 0 25px 25px; }
+    .flexslider_upsell ul {
+        margin: 0;
+        padding: 0;
+    }
+    .flexslider_upsell ul li {
+        margin: 0;
+        line-height: inherit;
+    }
+    .flexslider_upsell ul a > img { padding-left: 58px; }
+    .product-view + .sidebar .block-cart { margin-top: 10px; }
+    
+    /* CART SUMMARY PAGE
+     * ------------------------------------------------------------------------ */
+    .cart .page-title h1 {
+        float: none;
+        text-align: center;
+    }
+    .cart-items { }
+    .cart-items h2.product-name + a { display: none; }
+    .cart-items input[type="checkbox"] { display: none; }
+    button.btn-checkout {
+        width: 100%;
+        text-align: center;
+    }
+    .cart-image {
+        float: left;
+        padding-right: 35px;
+    }
+    .cart-remove-item { float: left; }
+    .cart-remove-item a.btn-remove2 {
+        width: 32px;
+        height: 32px;
+        background: transparent url('../images/icons/cart-delete.png') no-repeat 0 0;
+    }
+    .cart-product-info {
+        clear: both;
+        margin-top: 5px;
+    }
+    .cart-product-info h2 { margin-bottom: 15px; }
+    .cart-product-info h2 a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .cart-qty { margin-bottom: 10px; }
+    .cart-qty input {
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .cart-total { margin-bottom: 10px; }
+    .cart-total > span {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .cart-product-info h2 a:hover,
+    .cart-product-info h2 a:focus { color: #666; }
+    .cart-product-info h2 a:active { text-decoration: underline; }
+    .cart-price-no-tax > span { display: none; }
+    /*
+     * Doesn't hardly impact performance this is just easier
+     * Comment out the line below to bring back edit link for
+     * mobile
+     */
+    .edit-cart-item { display: none; }
+    .cart .totals {
+        float: none;
+        width: 100%;
+        background: white;
+    }
+    .cart .totals tr:first-child td,
+    .cart .totals tbody tr td { /* use tbody as a fall back */
+        font-weight: 700;
+        color: #666;
+    }
+    .cart .totals tfoot tr td strong { font-size: 20px; }
+    .cart .cart-collaterals .col2-set {
+        float: none;
+        width: 100%;
+    }
+    .cart .cart-collaterals .col2-set .col-2 { width: 100%; }
+    .flexslider_crosssell .flex-direction-nav a { top: 60%; }
+    
+    /* CHECKOUT PAGE
+     * ------------------------------------------------------------------------ */
+    /*
+     * A special note on these styles. Bear in mind some of this is
+     * because editing the your_company_mobile template files
+     * in checkout/onepage/ simple do not work. We are looking
+     * into a fix. If you know how to resolve this issue see the
+     * README file in that directory for more details. Thank you
+     * - DT
+     */
+    #checkoutSteps { margin: 0; }
+    #checkoutSteps ul.form-list { margin: 0; }
+    #checkoutSteps .step { padding: 15px 10px; }
+    #checkout-step-review.step { padding: 0; }
+    #checkoutSteps .form-list input.input-text { width: 70%; }
+    #checkoutSteps .form-list li ul {
+        margin: 0 0 0 10px;
+        padding-top: 10px;
+    }
+    #checkoutSteps .buttons-set { padding-top: 0; }
+    #checkoutSteps fieldset { margin-bottom: 0; }
+    #checkout-step-login.step { padding: 10px; }
+    
+    /* Begin CSS Hacks for onepage templates */
+    #checkoutSteps li.wide .input-box { width: 254px; }
+    #checkoutSteps .form-list li.control > input { float: left; }
+    #checkoutSteps #checkout-step-login .ul { display: none; }
+    /* #checkoutSteps #checkout-step-login .form-list { margin-left: 5px; } */
+    #checkoutSteps #checkout-step-login .col-1 p.required:first-child { display: none; }
+    /* End CSS Hacks for onepage templates */
+}
+/* #Font-Face
+================================================== */
+/* @font-face {
+	font-family: 'FontName';
+	src: url('../fonts/font_name.eot');
+	src: url('../fonts/font_name.eot?#iefix') format('embedded-opentype'),  
+	url('../fonts/font_name.woff') format('woff'),  
+	url('../fonts/font_name.ttf') format('truetype'),  
+	url('../fonts/font_name.svg#webfont') format('svg');
+} */

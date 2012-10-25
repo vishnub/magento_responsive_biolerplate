@@ -1,0 +1,116 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>">
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>">
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>">
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>">
+
+<!-- Facebook Open Graph Protocol -->
+<meta property="og:title" content="<?php echo $this->getTitle() ?>">
+<meta property="og:type" content="company">
+<meta property="og:url" content="<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>">
+<?php // TODO: Pull images from current pages to use for each "like" ?>
+<meta property="og:image" content="<?php echo $this->getSkinUrl('images/image.jpg'); ?>">
+<meta property="og:site_name" content="<?php echo $this->getLogoAlt(); ?>">
+<meta property="fb:admins" content="your_admin_number">
+
+<!-- for mobile and tab -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- icons -->
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon">
+<link rel="apple-touch-icon" href="<?php echo $this->getSkinUrl('images/apple_touch.png'); ?>">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $this->getSkinUrl('images/apple_touch_72.png'); ?>">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $this->getSkinUrl('images/apple_touch_114.png'); ?>">
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/modernizr.js') ?>"></script>
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+<?php if(@fopen($this->getSkinUrl('css/custom.css'), "r")) : // does the file exist? ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/custom.css') ?>">
+<?php endif; ?>
+<!-- facebook social script -->
+<?php /** @link https://developers.facebook.com/docs/reference/plugins/like/ */ ?>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'YOUR_APP_ID', // App ID
+      channelUrl : '<?php echo str_replace((substr(Mage::getBaseUrl(), 0, 5) == 'http:' ? 'http:' : 'https:'), '', Mage::getBaseUrl()); ?>/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
+</script>
+
+<?php
+/**
+ * No extra code required for tweet button
+ * @link https://dev.twitter.com/docs/tweet-button
+ */
+?>
+<!-- twitter script -->
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- google +1 script -->
+<?php
+/**
+ * No extra code required for google+
+ * @link https://developers.google.com/+/plugins/+1button/
+ */
+?>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

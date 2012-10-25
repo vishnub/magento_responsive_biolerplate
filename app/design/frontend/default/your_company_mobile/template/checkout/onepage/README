@@ -1,0 +1,8 @@
+For some reason there is a mysterious issue with these checkout steps.
+You will find that when trying to edit these pages, nothing will change.
+You can edit the your_company_mobile, your_company, or even the base template
+files and NOTHING will change. This is noted and it will be resolved in the
+very near future. If you know a work around to resolve this issue OTHER than
+CSS, please fork the project with your fix and you will be thanked by me
+personally and a nice credit will be given to you in all of the files within the
+onepage directory :)
